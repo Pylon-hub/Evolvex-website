@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolvex Nova Foundation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body {
+      background: linear-gradient(135deg, #ffcc00, #ff3300);
+      color: #333;
+    }
+
+    header {
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffcc00;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px 25px;
+      background: #ff3300;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #cc2900;
+    }
+
+    .section {
+      background: white;
+      margin: 30px auto;
+      padding: 30px;
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .section h2 {
+      color: #ff3300;
+      margin-bottom: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff3e6;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .founder {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .founder img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+  
+
+    /* Animations */
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #formOverlay div {
+      animation: popUp 0.4s ease;
+    }
+
+    @keyframes popUp {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex; align-items:center; justify-content:center; gap:15px;">
+    <img src="Images/evolvexflogo.jpg" alt="Evolvex Nova Foundation Logo" style="width:60px; height:60px; border-radius:50%;">
+    <h1>Evolvex Nova Foundation</h1>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#impact">Impact</a>
+    <a href="#founder">Founder</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Empowering Lives Through Innovation & Opportunity</h2>
+  <p>Founded in 2024, Evolvex Nova Foundation is committed to transforming lives by supporting marginalized communities through technology, education, health initiatives, and youth empowerment.</p>
+  <a href="#impact" class="btn">Explore Our Work</a>
+  <a href="#contact" class="btn">Join Us</a>
+</section>
+
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>Evolvex Nova Foundation is a forward-thinking initiative focused on bridging the gap between opportunity and access. We believe that every individual deserves a chance to thrive regardless of their background.</p>
+</section>
+
+<section id="impact" class="section">
+  <h2>Our Impact Areas</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Technology</h3>
+      <p>Providing digital skills and access to modern tools.</p>
+    </div>
+    <div class="card">
+      <h3>Education</h3>
+      <p>Supporting learning through scholarships and mentorship.</p>
+    </div>
+    <div class="card">
+      <h3>Health</h3>
+      <p>Improving community health awareness and support programs.</p>
+    </div>
+    <div class="card">
+      <h3>Youth Empowerment</h3>
+      <p>Equipping young people with skills and opportunities.</p>
+    </div>
+  </div>
+</section>
+
+<section id="founder" class="section">
+  <h2>Founder’s Message</h2>
+  <div class="founder">
+    <img src="Images/founder.JPG" alt="Founder Image">
+    <p>"At Evolvex Nova Foundation, our mission is to ignite potential and create lasting impact. We are driven by the belief that empowering one person can transform an entire community."</p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Email: evolvex254@gmail.com</p>
+  <p>Phone: 0755434453</p>
+  <a href="javascript:void(0)" onclick="openForm('donate')" class="btn">Donate</a>
+  <a href="javascript:void(0)" onclick="openForm('volunteer')" class="btn">Volunteer</a>
+</section>
+
+
+
+<!-- Popup Forms -->
+<div id="formOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+  <div style="background:white; padding:25px; border-radius:10px; width:90%; max-width:400px; position:relative;">
+    <span onclick="closeForm()" style="position:absolute; top:10px; right:10px; cursor:pointer; font-size:22px; background:#ff3300; color:white; width:30px; height:30px; display:flex; align-items:center; justify-content:center; border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,0.3);">&times;</span>
+    <h2 id="formTitle" style="color:#ff3300; margin-bottom:10px;">Form</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required style="width:100%; padding:10px; margin:5px 0;"><br>
+      <input type="email" placeholder="Email" required style="width:100%; padding:10px; margin:5px 0;"><br>
+      <input type="tel" placeholder="Phone" required style="width:100%; padding:10px; margin:5px 0;"><br>
+      <textarea placeholder="Message" style="width:100%; padding:10px; margin:5px 0;"></textarea>
+      <button type="submit" class="btn" style="width:100%;">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function openForm(type) {
+  document.getElementById('formOverlay').style.display = 'flex';
+  document.getElementById('formTitle').innerText = type === 'donate' ? 'Donate Form' : 'Volunteer Form';
+}
+
+function closeForm() {
+  document.getElementById('formOverlay').style.display = 'none';
+}
+
+
+// Scroll animation for cards
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const cardTop = card.getBoundingClientRect().top;
+
+    if(cardTop < triggerBottom) {
+      card.classList.add('show');
+    }
+  });
+});
+
+</script>
+<!-- Back to Home Button -->
+<div class="text-center my-4">
+  <a href="index.html" class="btn btn-warning btn-lg">Back to Home</a>
+</div>
+<footer>
+  <p>&copy; 2024 Evolvex Nova Foundation. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
