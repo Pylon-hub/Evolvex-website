@@ -13,6 +13,43 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+  gap:5px;
+}
+
+.hamburger div{
+  width:25px;
+  height:3px;
+  background:#fff;
+  border-radius:2px;
+  transition:0.3s;
+}
+
+/* MOBILE NAV */
+@media(max-width:768px){
+  nav ul{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:linear-gradient(90deg,#ff7b00,#ffcc00);
+    position:absolute;
+    top:60px;
+    left:0;
+    padding:20px 0;
+  }
+
+  nav ul.show{
+    display:flex;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+}
 
 body{
 background:#fff;
@@ -525,6 +562,10 @@ function openDonate(){document.getElementById("donateBox").style.display="flex";
 function closeDonate(){document.getElementById("donateBox").style.display="none";}
 function outsideClick(e,id){if(e.target.id===id){document.getElementById(id).style.display="none";}}
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeJoin();closeDonate();}});
+function toggleNav(){
+  const navLinks = document.querySelector("nav ul");
+  navLinks.classList.toggle("show");
+}
 </script>
 <!-- Back to Home Button -->
 <div class="d-flex justify-content-center my-4">
